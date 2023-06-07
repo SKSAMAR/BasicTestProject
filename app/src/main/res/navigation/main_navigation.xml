@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/postsList">
+
+    <fragment
+        android:id="@+id/postsList"
+        android:name="sk.samar.testproject.presentation.postsList.PostsListFragment"
+        android:label="PostsList" >
+        <action
+            android:id="@+id/action_postsList_to_postDetailed"
+            app:destination="@id/postDetailed"
+            app:launchSingleTop="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/postDetailed"
+        android:name="sk.samar.testproject.presentation.postDetailed.PostDetailedFragment"
+        android:label="PostDetailed" >
+        <action
+            android:id="@+id/action_postDetailed_to_postsList"
+            app:destination="@id/postsList"
+            app:launchSingleTop="true"
+            />
+    </fragment>
+</navigation>
